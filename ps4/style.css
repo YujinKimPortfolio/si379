@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F7EDE2; /* Light pastel peach */
+}
+
+h1, h2 {
+    color: #6D597A; /* Soft purple */
+}
+
+h2 {
+    font-size: 120%;
+    font-style: italic;
+}
+
+#quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    background: #FFDDD2; /* Soft pastel pink */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.answer-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    background-color: #A9DEF9; /* Soft pastel blue */
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px; /* Rounder buttons */
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.answer-btn:hover {
+    background-color: #89CFF0; /* Slightly darker pastel blue */
+    transform: scale(1.05);
+}
+
+.answer-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.correct {
+    background-color: #B5EAD7 !important; /* Soft pastel green */
+    font-weight: bold;
+}
+
+.incorrect {
+    background-color: #FFB7B2 !important; /* Soft pastel red */
+}
+
+#timer, #score {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6D597A; /* Soft purple */
+}
+
+
+/* Dark mode toggle styling */
+body.dark-mode {
+    background-color: #2E2E2E;
+    color: #F0F0F0;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode #timer, 
+.dark-mode #score {
+    color: #F0F0F0;
+}
+
+.dark-mode #quiz-container {
+    background: #3B3B3B;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .answer-btn {
+    background-color: #4A4A4A;
+    color: #FFF;
+}
+
+.dark-mode .answer-btn:hover {
+    background-color: #606060;
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    background-color: #666;
+}
+
+
+/* progress bar */
+#progress-container {
+    width: 60%;
+    background-color: #ddd;
+    border-radius: 12px;
+    margin: 20px auto;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #6D597A; /* Soft purple */
+    transition: width 0.3s ease-in-out;
+    border-radius: 12px;
+}
