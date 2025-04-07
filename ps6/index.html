@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Todo List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <h1>what do you want to do?</h1>
+
+  <ul id="tasks"></ul>
+
+  <button id="add-task">＋ add task</button>
+
+  <div class="interval-settings">
+    <div>
+      <label for="work-interval">work interval (minutes):</label>
+      <input id="work-interval" type="number" value="25" min="1">
+    </div>
+    <div>
+      <label for="break-interval">break interval (minutes):</label>
+      <input id="break-interval" type="number" value="5" min="1">
+    </div>
+  </div>
+
+  <div id="timer-screen" class="timer-screen" style="display: none;">
+    <div id="current-task" class="current-task"></div>
+    <div class="timer-time">
+      ⏱️
+      <span id="timer">00:00</span>
+    </div>
+    <div class="timer-controls">
+      <button id="pause-btn" class="pause-btn" style="display: none;">⏸️ pause</button>
+      <button id="stop-btn" class="stop-btn">🟥 stop</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
