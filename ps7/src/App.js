@@ -1,3 +1,5 @@
+// In completing this project, I started with the sample codes given in the project specification. In following instructions, I got some help from genAI tools in cross checking React component structure, function logic, and deployment steps in order to ensure that the application runs smoothly to meet the requirements. Also, I worked with it to make minor improvements to CSS for usability. 
+
 // App.js
 import React from 'react';
 import Slider from './Slider';
