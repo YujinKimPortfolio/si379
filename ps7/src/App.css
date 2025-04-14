@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  /* some additions to center everything nicely */
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  background-color: #f0f0f5;
+  min-height: 100vh;
+  padding-top: 20px;
 }
 
 .App-logo {
@@ -35,4 +40,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Sliders and Inputs */
+input[type="range"] {
+  width: 200px;
+  margin-left: 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* Cheating Mode Checkbox */
+label {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Guess Button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Feedback Text */
+h2 {
+  color: #222;
+  margin-top: 20px;
 }

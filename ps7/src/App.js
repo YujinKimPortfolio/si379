@@ -8,23 +8,24 @@ const MIN = 0;
 const MAX = 255;
 
 function App() {
-  // 🎯 Target color states
+  // Random Color Display (target color setting)
   const [targetRed, setTargetRed] = React.useState(getRandomIntegerBetween(MIN, MAX));
   const [targetGreen, setTargetGreen] = React.useState(getRandomIntegerBetween(MIN, MAX));
   const [targetBlue, setTargetBlue] = React.useState(getRandomIntegerBetween(MIN, MAX));
 
-  // 🎨 User's guess color states
+  // User can input RGB values
   const [guessRed, setGuessRed] = React.useState(0);
   const [guessGreen, setGuessGreen] = React.useState(0);
   const [guessBlue, setGuessBlue] = React.useState(0);
 
-  // 🧪 Cheating mode toggle
+  // Cheating mode toggle - Optional Cheat mode to show guess
   const [cheatingMode, setCheatingMode] = React.useState(false);
 
-  // 📢 Feedback message
+  // Feedback message - Show % closeness after guessing
   const [feedback, setFeedback] = React.useState("");
 
-  // 🛎️ When the user clicks "Guess!" button
+
+  // Handle when the user clicks "Guess!" button - Compare guess and target
   function handleGuess() {
     const distance = Math.sqrt(
       Math.pow(targetRed - guessRed, 2) +
@@ -37,19 +38,20 @@ function App() {
     setFeedback(`You are ${score}% close!`);
   }
 
-  // 🧪 When user toggles cheating mode
+  // Toggle live preview cheating mode
   function toggleCheating() {
     setCheatingMode(prev => !prev);
   }
 
   return (
+    
     <div className="App">
       <h1>Color Guesser</h1>
 
-      {/* 🎯 Target Color */}
+      {/* Target Color */}
       <div id="color-preview" style={{backgroundColor: `rgb(${targetRed}, ${targetGreen}, ${targetBlue})`}} />
 
-      {/* 🧪 Cheating mode checkbox */}
+      {/* Cheating mode checkbox */}
       <div style={{textAlign: "center", marginBottom: "10px"}}>
         <label>
           <input type="checkbox" checked={cheatingMode} onChange={toggleCheating} />
@@ -57,12 +59,13 @@ function App() {
         </label>
       </div>
 
-      {/* 🎨 User's Guess Preview (only if cheating mode is ON) */}
+      {/* User's Guess Preview (only if cheating mode is on) */}
       {cheatingMode && (
         <div id="color-preview" style={{backgroundColor: `rgb(${guessRed}, ${guessGreen}, ${guessBlue})`}} />
       )}
 
-      {/* 🎨 Sliders for Red, Green, Blue */}
+      
+      {/* Sliders for Red, Green, Blue */}
       <div id="color-picker">
         <div className="row">
           <span className="component-color-preview">Red:</span>
@@ -78,12 +81,12 @@ function App() {
         </div>
       </div>
 
-      {/* 🛎️ Guess Button */}
+      {/* Guess Button */}
       <div style={{textAlign: "center", marginTop: "10px"}}>
         <button onClick={handleGuess}>Guess!</button>
       </div>
 
-      {/* 📢 Feedback */}
+      {/* Feedback */}
       <h2 style={{textAlign: "center"}}>{feedback}</h2>
 
     </div>
@@ -92,7 +95,7 @@ function App() {
 
 export default App;
 
-// 🎲 Helper function to generate random integers
+
 function getRandomIntegerBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
