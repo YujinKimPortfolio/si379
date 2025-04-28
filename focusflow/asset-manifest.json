@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c285c84a.css",
-    "main.js": "/static/js/main.80ccbff5.js",
-    "static/js/453.ecac0793.chunk.js": "/static/js/453.ecac0793.chunk.js",
-    "index.html": "/index.html",
-    "main.c285c84a.css.map": "/static/css/main.c285c84a.css.map",
-    "main.80ccbff5.js.map": "/static/js/main.80ccbff5.js.map",
-    "453.ecac0793.chunk.js.map": "/static/js/453.ecac0793.chunk.js.map"
+    "main.css": "/si379/focusflow/static/css/main.c285c84a.css",
+    "main.js": "/si379/focusflow/static/js/main.699e405b.js",
+    "static/js/453.ecac0793.chunk.js": "/si379/focusflow/static/js/453.ecac0793.chunk.js",
+    "index.html": "/si379/focusflow/index.html",
+    "main.c285c84a.css.map": "/si379/focusflow/static/css/main.c285c84a.css.map",
+    "main.699e405b.js.map": "/si379/focusflow/static/js/main.699e405b.js.map",
+    "453.ecac0793.chunk.js.map": "/si379/focusflow/static/js/453.ecac0793.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c285c84a.css",
-    "static/js/main.80ccbff5.js"
+    "static/js/main.699e405b.js"
   ]
 }
